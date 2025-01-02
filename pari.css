@@ -1,0 +1,133 @@
+.kunna {
+  padding-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-left: 13%;
+  width: 90%;
+  max-width: 1200px;
+  /* Set a max-width for larger screens */
+  margin: auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.andyi {
+  width: calc(28.333% - 1.33rem);
+  /* Exactly one-third width minus gap */
+  min-width: 250px;
+  /* Minimum width before wrapping */
+  margin-bottom: 1rem;
+}
+
+.pari {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pari img {
+  object-fit: cover;
+  scale: 0.7;
+  height: auto;
+  display: flex;
+  margin-right: auto;
+}
+
+.paritext {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(83, 67, 91, 1);
+}
+
+/* Responsive breakpoint */
+@media (max-width: 768px) {
+  .andyi {
+    width: calc(50% - 1rem);
+    /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .andyi {
+    width: 100%;
+    /* 1 per row on mobile */
+  }
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  gap: 100px;
+  justify-content: flex-start;
+  max-width: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 70px;
+}
+
+.feature-item {
+  display: flex;
+  width: calc(32% - 10px);
+  /* 2 items per row with gap consideration */
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.feature-image {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-image img {
+  transform: scale(0.7);
+  max-width: 100%;
+  height: auto;
+}
+
+.feature-content {
+  width: 65%;
+  padding-left: 15px;
+  border-left: 1px solid rgba(83, 67, 91, 0.4);
+  /* #53435B66 */
+}
+
+.feature-content h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: var(--sub);
+  color: #53435B;
+  font-family: "Manrope", sans-serif;
+  max-width: 300px;
+}
+
+@media screen and (max-width: 1300px) {
+  .feature-item {
+    width: 45%;
+  }
+
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .feature-item {
+    width: 100%;
+    /* Full width on smaller screens */
+  }
+
+  .features-grid {
+    width: 100%;
+    gap: 15px;
+  }
+}
