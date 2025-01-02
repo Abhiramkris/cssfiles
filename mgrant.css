@@ -1,0 +1,1241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: poppins;
+}
+
+:root {
+    --head: 35px;
+    --sub: 28px;
+    --boddy: 20px;
+    --mhead: 25px;
+    --msub: 16px;
+    --mbody: 10px;
+}
+
+
+
+.solutionlanding {
+    height: 100%;
+    padding-bottom: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.timage {
+    width: 100%;
+    height: 400px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+}
+
+.solutioncontainer {
+    display: flex;
+    align-items: center;
+}
+
+
+.imgcontsln {
+    position: relative;
+}
+
+.highlight1 {
+    position: absolute;
+    top: 90px;
+    left: 750px;
+    height: 180px;
+}
+
+
+.highlight2 {
+    position: absolute;
+    left: -100px;
+    top: 300px;
+}
+
+@media (max-width:849px) {
+
+    .highlight1,
+    .highlight2 {
+        display: none;
+    }
+}
+
+.twocard {
+    display: flex;
+    gap: 40px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Common styles for cards */
+.card1,
+.card2 {
+    position: relative;
+    width: 55%;
+    max-width: 650px;
+    height: 340px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-color 0.5s ease;
+}
+
+.card1 {
+    background-image: url(/public/img/Rectangle\ 3800.png);
+    background-color: black;
+}
+
+.card2 {
+    background-image: url(/public/img/5fa07a867643b2884190777494a58647.jpeg);
+    background-color: navy;
+}
+
+/* Text inside the cards */
+.textincard {
+    position: relative;
+    z-index: 2;
+    /* Ensures it's above the overlay */
+    padding-bottom: 10%;
+}
+
+/* Overlay styles */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #811622D1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Initially hidden */
+    transform: scale(0.95);
+    /* Slightly scaled down */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    /* Smooth transition */
+    z-index: 1;
+    /* Ensures it’s below the text in the card */
+}
+
+/* Animated text styles */
+.animated-text {
+    margin-top: -100px;
+    font-size: .8rem;
+    width: 90%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    /* Start slightly below */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    /* Smooth transition */
+}
+
+/* Hover effect on card */
+.card1:hover .overlay,
+.card2:hover .overlay {
+    opacity: 1;
+    /* Fully visible */
+    transform: scale(1);
+    /* Back to original size */
+}
+
+/* Hover effect on animated text */
+.card1:hover .animated-text,
+.card2:hover .animated-text {
+    opacity: 1;
+    /* Fully visible */
+    transform: translateY(0);
+    /* Slide into place */
+}
+
+
+
+
+
+@media (max-width: 800px) {
+
+    .card1,
+    .card2 {
+        width: 300px;
+    }
+
+    .card2 {
+        margin-top: 20px;
+    }
+
+    .twocard {
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+
+.textincard {
+    position: absolute;
+    color: aliceblue;
+    margin-left: 35px;
+    margin-top: 320px;
+    font-size: 18px;
+}
+
+.keyfeatures {
+    width: 100%;
+    /* bg url here */
+}
+
+.keycontainer {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    max-width: 1100px;
+}
+
+.keycontainer1 {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+}
+
+.keycard img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: auto;
+    transform: scale(.75);
+}
+
+.keycard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 1px;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    box-shadow: 0 4px 30px 0 #5F5F5F1A;
+    background-color: white;
+}
+
+.imgkeykey {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 10px;
+
+}
+
+
+
+.keycard h5 {
+    font-family: poppins;
+    color: #F58634;
+    font-weight: 600;
+    font-size: var(--boddy);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+    line-height: 23px !important;
+    align-items: center;
+    text-align:start;
+}
+
+@media (max-width:800px) {
+
+    .keycard h5 {
+        font-size: var(--mbody);
+        line-height: 15px !important;
+    }
+    .keycard{
+        width: 80%;
+        max-width: 200px;
+    }
+
+}
+
+
+
+.keycard h8 {
+    font-size: 15px;
+    text-align: left;
+    width: 200px;
+}
+
+@media (max-width: 1300px) {
+    .keycontainer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 80%;
+    }
+
+    .keycontainer1 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        margin-bottom: -100px;
+    }
+
+    .keycard h3 {
+        font-size: var(--sub);
+        line-height: 18px !important;
+
+    }
+
+    .keycard h8 {
+        width: 20%;
+        font-size: 12px;
+        line-height: 15px;
+        width: 300px;
+        margin-top: 8px;
+    }
+
+    .keycard {
+        border: none !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .keycontainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .keycontainer1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        padding-bottom: 25px;
+        gap: 10px;
+    }
+
+    .keycard {
+        border: none !important;
+        height: 140px !important;
+    }
+
+    .keycard h3 {
+        font-size: var(--msub) !important;
+        line-height: 10px !important;
+    }
+
+    .keycard h7 {
+        display: none;
+    }
+
+    .keycard h6 {
+        display: block;
+        font-size: var(--mbody) !important;
+        position: relative;
+        margin-top: -16px;
+        line-height: 15px !important;
+    }
+
+    .keycard h8 {
+        width: 160px;
+        margin-top: 3px !important;
+    }
+}
+
+
+.feature {
+    background-color: #F7E2D1;
+    width: 100%;
+    height: 120%;
+}
+
+.feacont {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.selector {
+    margin-top: 30px;
+    width: 40%;
+    max-width: 1000px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.selector2 {
+    width: 60%;
+}
+
+.selectorcard {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 90px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 0 30px 0 #5F5F5F1A;
+    border-radius: 10px;
+}
+
+.selectorimg {
+    width: 100%;
+    height: 300px;
+}
+
+.changingcont {
+    display: none;
+}
+
+.changingcont.active {
+    display: block;
+}
+
+.changingcont {
+    display: none;
+}
+
+.changingcont.active {
+    display: block;
+}
+
+.selectorcard {
+    cursor: pointer;
+}
+
+.selectorcard.active {
+    background-color: #F58634;
+    background-repeat: no-repeat;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.mgrant-keyf {
+    margin-top: 5%;
+    margin-left: 20%;
+    height: 80px;
+    width: 80px;
+
+}
+
+@media (max-width:800px) {
+    .mgrant-keyf {
+        margin-top: 3%;
+        margin-left: 20%;
+        height: 60px;
+        width: 60px;
+
+    }
+}
+
+.usecase {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.selectorcard h5 {
+    width: 70%;
+    font-size: 15px;
+    margin: auto;
+}
+
+@media (max-width: 800px) {
+    .usecase {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+    }
+
+    .feacont {
+        flex-direction: column;
+    }
+
+    .selector {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns */
+        grid-template-rows: repeat(2, auto);
+        /* 2 rows */
+        width: 100%;
+    }
+
+    .selectorcard {
+        width: 100%;
+    }
+
+    .selectorcard h5 {
+        width: 70%;
+        font-size: 10px;
+        margin: auto;
+    }
+
+    .selector2 {
+        width: 100%;
+    }
+
+    .selectorimg {
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+}
+
+.contentusecase::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background-color: white;
+    margin-left: -10px;
+}
+
+.contentusecase {
+    margin-left: 30px;
+    width: 65%;
+    margin-top: 40px;
+    color: white;
+}
+
+.imgusecase {
+    width: 100%;
+    height: 300px;
+    background-color: green;
+    border: 1px solid black;
+}
+
+
+.impactstory {
+    width: 90%;
+    margin: auto;
+    max-width: 1800px;
+}
+
+.impact {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+.leftimpact {
+    height: 500px;
+    /* Full height of leftimpact */
+    width: 40%;
+    background-color: aqua;
+    position: relative;
+    /* Needed for the hover-content to position inside */
+    overflow: hidden;
+    /* Ensures hover-content doesn’t spill outside */
+}
+
+
+.rightimpact {
+    height: 500px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.midimpact {
+    width: 30%;
+    height: 620px;
+    position: relative;
+    /* Establish a positioning context for the text-content */
+    overflow: hidden;
+}
+
+.midimpact img {
+    width: 100%;
+    height: 100%;
+    /* Make the image cover the entire container */
+    object-fit: cover;
+    position: absolute;
+    /* Keep the image fixed in place */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Place the image below the text content */
+}
+
+.midimpact .text-content {
+    background-color: rgba(129, 22, 34, 0.9);
+    /* Semi-transparent overlay */
+    font-family: "Manrope", sans-serif;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    /* Overlay the text content on the image */
+    bottom: 0;
+    /* Start from the bottom of the container */
+    width: 100%;
+    height: 35%;
+    /* Default height */
+    z-index: 2;
+    /* Place the text content above the image */
+    transition: height 0.3s ease-in-out;
+    /* Smooth expansion on hover */
+}
+
+.midimpact:hover .text-content {
+    height: 100%;
+    /* Expand text content height on hover */
+}
+
+.rightimpact:hover .hover-content {
+    width: 100%;
+}
+
+.leftimpact:hover .hover-content {
+    width: 100%;
+}
+
+.impactimg {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 240px;
+    width: 100%;
+    background-color: blue;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    /* Add smooth transition for image expansion */
+}
+
+.impactimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    /* Smooth transition for scaling */
+}
+
+
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    /* Starts with half the width */
+    height: 100%;
+    /* Full height of parent (leftimpact or impactimg) */
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    /* Smooth animation */
+}
+
+.leftimpact {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease;
+}
+
+.impactimg2:hover .leftimpact:hover {
+
+    background-size: 150%;
+}
+
+@media (max-width:550px) {
+    .leftimpact:hover {
+        background-size: 170%;
+    }
+}
+
+#left-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    /* Starts with half the width */
+    height: 100%;
+    /* Full height of parent (leftimpact or impactimg) */
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.hover-text {
+    width: 100%;
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    opacity: 1;
+    /* Visible by default */
+}
+
+.hover-points {
+    font-size: 10px;
+}
+
+.impact li {
+    list-style: none;
+    color: white;
+}
+
+.impact li::before {
+    background-image: none;
+}
+
+
+.impactimg {
+    position: relative;
+    height: 240px;
+    width: 100%;
+    background-color: blue;
+    background-size: cover;
+    /* Ensure the image covers the container */
+    background-position: center;
+    transition: background-size 0.3s ease;
+    /* Smooth transition for background image scaling */
+}
+
+.impactimg:hover {
+    background-size: 120%;
+    /* Scale the background image to 120% on hover */
+}
+
+
+
+
+
+.leftimpact:hover .hover-text,
+.impactimg:hover .hover-text {
+    color: white;
+}
+
+.child {
+    width: 50%;
+    background-color: red;
+}
+
+@media (max-width: 1000px) {
+    .impactstory {
+        width: 100%;
+    }
+
+    .impact {
+        flex-direction: column;
+    }
+
+    .rightimpact {
+        width: 100%;
+    }
+
+    .leftimpact {
+        width: 100%;
+    }
+
+    .midimpact {
+        width: 100%;
+        height: 400px;
+    }
+
+    .midmidimpact {
+        display: none;
+    }
+
+    .points-in {}
+}
+
+
+.countingcont {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px !important;
+    margin: auto;
+    margin-left: 7vw;
+    margin-right: 10vw;
+}
+
+.countelement {
+    display: flex;
+    justify-content: flex-start;
+    color: #F5863480;
+    font-weight: 800;
+    font-size: 100px;
+    font-family: "Manrope", sans-serif;
+}
+
+.countelement1 {
+    display: flex;
+    justify-content: flex-start;
+    color: #F5863480;
+    font-weight: 800;
+    font-size: 100px;
+    font-family: "Manrope", sans-serif;
+}
+
+
+
+
+.solcard {
+    background-color: #F7E2D1;
+    width: 100%;
+    gap: 120px;
+    height: auto;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.sol1,
+.sol2 {
+    width: 25%;
+    height: 530px;
+    background-color: white;
+    margin-top: 215px;
+    border-radius: 20px;
+    font-family: "Manrope", sans-serif;
+    max-width: 500px;
+    min-width: 300px;
+    overflow: hidden;
+    position: relative;
+    /* Make the container a positioning context */
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Ensures content stays at the top */
+}
+
+
+.solcont h2 {
+    font-weight: 700;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: var(--sub);
+}
+
+.solcont::after {
+    content: '';
+    width: 7%;
+    height: 5px;
+    background-color: #F58634;
+    position: absolute;
+    margin-top: -9px;
+    margin-left: 10%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: var(--mbody);
+    position: relative;
+    padding-left: 20px;
+}
+
+.muft {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+
+}
+
+li::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-image: url('/public/img/others/done.png');
+    position: absolute;
+    margin-left: -30px;
+    background-repeat: no-repeat;
+    scale: .7;
+}
+
+.solnimg,
+.solnimg1 {
+    width: 85%;
+    height: 40%;
+    max-height: 270px;
+    background-color: black;
+    margin: auto;
+    border-radius: 15px;
+    position: absolute;
+    /* Position the image relative to its container */
+    bottom: 15px;
+    /* Keep the image at the bottom of the container */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Adjust for the left 50% positioning */
+}
+
+
+
+
+.service1 {
+    display: none;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .muft {
+        position: relative;
+    }
+
+    .solnimg1 {
+        height: 33%;
+    }
+
+    .solnimg {
+        height: 35%;
+    }
+
+    .countelement {
+        font-size: 55px;
+    }
+
+    .countelement1 {
+        font-size: 55px;
+
+    }
+
+    .top3-right {
+        gap: 30px;
+    }
+
+
+
+
+    .serviceconatiners {
+        display: none;
+    }
+
+    .solcard {
+        align-items: center;
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .sol1,
+    .sol2 {
+        width: 70%;
+        justify-content: flex-start;
+        margin: auto;
+        max-width: 350px;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+        height: 450px;
+        position: relative;
+    }
+
+
+    .keyfeatures1 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .dhnititle1 {
+        font-size: 35px;
+        font-weight: 700;
+        text-align: center;
+        color: #811622;
+        width: 100%;
+        margin-left: -200px;
+    }
+
+    .solcont h2 {
+        padding-top: 20px;
+        font-size: var(--msub);
+    }
+
+    .solcont::after {
+        width: 7%;
+    }
+
+}
+
+.launchiconscontainer {
+    width: 80%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.launchicons1 {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+
+    .launchicons1,
+    .launchicons2 {
+        width: 100px;
+    }
+}
+
+.launchicons2 {
+    width: 140px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.icons {
+    width: 80px;
+    height: 80px;
+}
+
+.iconstext {
+    color: #53435B;
+    text-align: center;
+    padding-top: 15px;
+    /* at 860 make icons haveapding  */
+}
+
+@media (max-width: 1200px) {
+
+    .launchicons1,
+    .launchicons2 {
+        margin-bottom: 50px;
+        scale: .8;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .launchiconscontainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns */
+        grid-template-rows: repeat(3, auto);
+        /* 2 rows */
+        justify-content: center;
+        /* Center horizontally */
+        align-content: center;
+        /* Center vertically */
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .launchicons1,
+    .launchicons2 {
+        margin-bottom: 50px;
+        scale: .8;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .launchiconscontainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 3 columns */
+        grid-template-rows: repeat(3, auto);
+        /* 2 rows */
+        justify-content: center;
+        /* Center horizontally */
+        align-content: center;
+        /* Center vertically */
+    }
+
+}
+
+
+.lastcontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    max-width: 1800px;
+    margin: auto;
+}
+
+.last-left {
+    font-size: 65px;
+
+    align-items: flex-end;
+    height: 100%;
+    width: 40%;
+
+}
+
+.last-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 60%;
+    padding-right: 10%;
+
+}
+
+@media (max-width: 1400px) {
+
+    .lastcontainer {
+        flex-direction: column;
+    }
+
+    .last-right {
+        width: 100%;
+        height: 900px;
+        align-items: center;
+        margin-top: -130px;
+        flex-direction: column;
+    }
+
+    .last-left {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1400px) {
+
+    .countingcont {
+        gap: 60px;
+        margin: auto;
+        justify-content: center;
+    }
+}
+
+.marquee {
+    margin-top: 10%;
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding: 10px 0;
+
+}
+
+.marquee-content {
+
+    display: flex;
+    gap: 100px;
+    /* Space between logos */
+    animation: scroll 7s linear infinite;
+}
+
+.marquee-content img {
+    height: 50px;
+    /* Adjust logo height */
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Moves exactly half the total width */
+    }
+}
+
+/* Duplicate content using pseudo-elements for seamless looping */
+.marquee-content::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    /* Duplicate the content */
+}
+
+/* Blur Layers */
+.blur-layer {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.blur-layer.left {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.blur-layer.right {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+
+.responsive-container {
+    display: none;
+}
+
+@media (max-width:1200px) {
+    .lastcontainer {
+        display: none;
+    }
+
+    .responsive-container {
+        display: block;
+
+    }
+}
