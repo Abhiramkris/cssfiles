@@ -17,13 +17,18 @@ body {
     gap: 2px;
     overflow: hidden;
 }
-.topcontainerlinks img{
-scale: .5;
-margin-right: -10px !important;
+
+.topcontainerlinks img {
+    scale: .5;
+    margin-right: 0px !important;
 }
 
 .topcontainerlinks p {
     margin: 0;
+}
+
+#nav-logo img {
+    height: 60px;
 }
 
 /* Navbar container */
